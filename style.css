@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+body {
+    font-family:'Nunito Sans', sans-serif; 
+}
+
+header {
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+
+    font-family: 'Lobster', cursive;
+}
+
+header, h1 {
+    padding: 2px;
+}
+
+main {
+    padding: 30px 50px ;
+}
