@@ -37,7 +37,7 @@ class Produto {
 
             td_id.innerText = this.arrayProdutos[i].id;
             td_produto.innerText = this.arrayProdutos[i].nomeProduto;
-            td_valor.innerText = this.arrayProdutos[i].valor;
+            td_valor.innerText = ` R$: ${this.arrayProdutos[i].valor}`
 
             td_id.classList.add('center')
             
@@ -52,6 +52,7 @@ class Produto {
 
             td_acoes.appendChild(imgEdit )
             td_acoes.appendChild(imgDelet)
+            td_acoes.style.width = '100px'
             
 
            console.log(this.arrayProdutos)
@@ -61,7 +62,7 @@ class Produto {
     }
 
     adicionar(produto) {
-        produto.valor = parseFloat(produto.valor)
+        produto.valor = parseFloat(produto.valor);
         this.arrayProdutos.push(produto);
         this.id++;
     }
@@ -70,6 +71,7 @@ class Produto {
     lerDados(){
         let produto = {}
         produto.id = this.id;
+        
         produto.nomeProduto = document.getElementById('produto').value;
         produto.valor = document.getElementById('valor').value;
 

@@ -81,7 +81,10 @@ table th,td{
 }
 table td img {
     width: 22px;
-    padding: 3px;
+    
+    padding: 13px;
+    
+    
 }
 
 .center {
