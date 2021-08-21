@@ -102,6 +102,7 @@ class Produto {
         document.getElementById('valor').value = ''
 
         document.getElementById('btn1').innerText = 'Salvar';
+        document.getElementById('btn2').innerText = 'Limpar';
 
         this.editId = null
         
@@ -124,6 +125,7 @@ class Produto {
         document.getElementById('valor').value = dados.valor;
 
         document.getElementById('btn1').innerText = 'Atualizar';
+        document.getElementById('btn2').innerText = 'Cancelar';
     }
 
     deletar(id){
