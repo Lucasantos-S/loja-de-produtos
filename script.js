@@ -11,11 +11,16 @@ class Produto {
             this.adicionar(produto);
         }
 
-         this.listaTabela();
+            this.listaTabela();
+            this.limpar();
+
     }
+
+        
 
     listaTabela() {
         let tbody = document.getElementById('tbody')
+        tbody.innerText = '';
         for(let i = 0; i < this.arrayProdutos.length; i++) {
             let tr = tbody.insertRow();
 
@@ -27,7 +32,18 @@ class Produto {
             td_id.innerText = this.arrayProdutos[i].id;
             td_produto.innerText = this.arrayProdutos[i].nomeProduto;
             td_valor.innerText = this.arrayProdutos[i].valor;
+
+            td_id.classList.add('center')
             
+            let imgEdit=document.createElement('img')
+            let imgDelet=document.createElement('img')
+            imgEdit.src = 'img/edit.png'
+            imgDelet.src = 'img/delet.png'
+
+            td_acoes.appendChild(imgEdit )
+            td_acoes.appendChild(imgDelet)
+            
+
            
 
         }
@@ -47,6 +63,8 @@ class Produto {
         produto.valor = document.getElementById('valor').value;
 
         return produto;
+
+        
     }
     
     validaCampos(produto){
@@ -67,7 +85,8 @@ class Produto {
     }
 
     limpar(){
-      
+        document.getElementById('produto').value = ''
+        document.getElementById('valor').value = ''
         
     }
 
